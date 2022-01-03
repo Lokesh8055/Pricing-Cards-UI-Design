@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 1rem;
+  text-align: left;
+}
+
+ul li::before {
+  content: "\2713\0020";
+  color: #7cbc84;
+  margin-right: 2px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply grid place-items-center h-screen;
+  }
+  section {
+    @apply bg-lightSilver rounded-sm p-10 grid lg:grid-cols-3 sm:my-8 md:my-0 gap-10;
+  }
+  .card {
+    @apply bg-white p-5 rounded-sm text-center text-darkBlue w-72 shadow-md;
+  }
+
+  .price {
+    @apply text-4xl font-bold mb-2;
+  }
+
+  .card-header {
+    @apply text-lg uppercase w-full rounded-sm p-3 font-bold;
+  }
+
+  .heading-two {
+    @apply uppercase text-lg mb-4;
+  }
+
+  .description {
+    @apply font-semibold leading-tight;
+  }
+
+  .btn {
+    @apply rounded-sm py-3 px-3 my-5 uppercase text-xs font-bold cursor-pointer tracking-wider border-2 border-solid border-darkBlue w-full;
+  }
+}
